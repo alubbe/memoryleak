@@ -1,5 +1,5 @@
 # Showcase of a Jade Memory Leak (v8's fault)
-Newer versions of v8 introduced a performance regression, where
+Some time between 3.24.35.22 and 3.26.33, v8 introduced a performance regression, where
 ```sh
 /usr/bin/time -v node -e "for(var i = 0; i < 500000; i++) (function(){var array = [{a: 1, b: 'r'}]; array.push({a:2, b:'s'});})()"
 ```
@@ -18,3 +18,8 @@ There are three ways to test this bug:
 /usr/bin/time -v node -e "for(var i = 0; i < 300000; i++) require('./compiledWithoutDebug')();"
 /usr/bin/time -v node -e "for(var i = 0; i < 300000; i++) require('./fixedMemoryLeak')();"
 ```
+This bug affects:
+
+- node 0.11.14+
+- node 0.12.*
+- all iojs releases
