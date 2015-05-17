@@ -1,6 +1,9 @@
-<button onClick="runWithDebug()"> runWithDebug </button>
-<button onClick="runWithoutDebug()"> runWithoutDebug </button>
-<button onClick="runWithDebugLeakFixed()"> runWithDebugLeakFixed </button>
+<h1>A Memory Leak in Jade (v8's fault)</h1>
+<p>More information on this bug <a href="https://github.com/alubbe/memoryleak">here</a></p>
+
+<p><button onClick="runWithDebug()"> runWithDebug </button> Causes a memory leak</p>
+<p><button onClick="runWithoutDebug()"> runWithoutDebug </button> Avoids the faulty code altogether, does not leak</p>
+<p><button onClick="runWithDebugLeakFixed()"> runWithDebugLeakFixed </button> Fixes the memory leak</p>
 
 <script type="text/javascript">
   var locals = {
