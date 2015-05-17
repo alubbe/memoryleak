@@ -1,4 +1,5 @@
 # A Memory Leak in Jade (v8's fault)
+Demo: https://alubbe.github.io/memoryleak/
 
 Some time between 3.24.35.22 and 3.26.33, v8 introduced a performance regression, where
 ```js
